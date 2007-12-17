@@ -8,10 +8,8 @@ Group:          Development/Perl
 Summary:        Load modules and create objects on demand
 Source0:        ftp://ftp.perl.org/pub/CPAN/modules/by-module/Class/%{realname}-%{version}.tar.bz2
 Url:            http://search.cpan.org/dist/%{realname}
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Requires:       perl
 BuildArch:      noarch
-BuildRoot:      %{_tmppath}/%{name}-%{version}-root
 
 %description
 Certain applications like to defer the decision to use a
