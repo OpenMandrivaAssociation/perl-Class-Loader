@@ -5,6 +5,7 @@ Release:        %mkrel 3
 License:        Artistic
 
 Group:          Development/Perl
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 Summary:        Load modules and create objects on demand
 Source0:        ftp://ftp.perl.org/pub/CPAN/modules/by-module/Class/%{realname}-%{version}.tar.bz2
 Url:            http://search.cpan.org/dist/%{realname}
