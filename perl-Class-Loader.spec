@@ -1,16 +1,18 @@
-%define realname        Class-Loader
-Name:           perl-%{realname}
-Version:        2.03
-Release:        %mkrel 5
-License:        Artistic
+%define upstream_name    Class-Loader
+%define upstream_version 2.03
 
-Group:          Development/Perl
-BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:        Load modules and create objects on demand
-Source0:        ftp://ftp.perl.org/pub/CPAN/modules/by-module/Class/%{realname}-%{version}.tar.bz2
-Url:            http://search.cpan.org/dist/%{realname}
-Requires:       perl
-BuildArch:      noarch
+License:        Artistic
+Group:          Development/Perl
+Url:            http://search.cpan.org/dist/%{upstream_name}
+Source0:        ftp://ftp.perl.org/pub/CPAN/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.bz2
+
+BuildArch: noarch
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 Certain applications like to defer the decision to use a
@@ -24,7 +26,7 @@ programmer decide what modules will be used by it instead
 of hard-coding their names.
 
 %prep
-%setup -q -n %{realname}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 CFLAGS="$RPM_OPT_FLAGS" echo | %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -44,4 +46,3 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 %{perl_vendorlib}/Class
 %{_mandir}/*/*
-
