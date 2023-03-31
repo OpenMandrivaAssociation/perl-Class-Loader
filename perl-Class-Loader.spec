@@ -4,7 +4,7 @@
 Summary:	Load modules and create objects on demand
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	17
+Release:	18
 License:	Artistic
 Group:		Development/Perl
 Url:		http://search.cpan.org/dist/%{upstream_name}
