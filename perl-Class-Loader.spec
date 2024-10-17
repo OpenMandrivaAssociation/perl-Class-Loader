@@ -7,7 +7,7 @@ Version:	%perl_convert_version %{upstream_version}
 Release:	18
 License:	Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	perl(Test)
