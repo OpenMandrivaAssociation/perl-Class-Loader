@@ -1,14 +1,12 @@
 %define upstream_name    Class-Loader
-%define upstream_version 2.03
-
 Summary:	Load modules and create objects on demand
 Name:		perl-%{upstream_name}
-Version:	%perl_convert_version %{upstream_version}
-Release:	18
+Version:	2.03
+Release:	19
 License:	Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Class/%{upstream_name}-%{upstream_version}.tar.bz2
+Url:		https://metacpan.org/dist/%{upstream_name}
+Source0:	ftp://ftp.perl.org/pub/CPAN/modules/by-module/Class/%{upstream_name}-%{version}.tar.bz2
 BuildArch:	noarch
 BuildRequires:	make
 BuildRequires:	perl(Test)
@@ -26,7 +24,7 @@ programmer decide what modules will be used by it instead
 of hard-coding their names.
 
 %prep
-%setup -qn %{upstream_name}-%{upstream_version}
+%setup -qn %{upstream_name}-%{version}
 
 %build
 CFLAGS="%{optflags}" echo | %{__perl} Makefile.PL INSTALLDIRS=vendor
